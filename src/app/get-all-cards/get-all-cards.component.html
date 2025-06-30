@@ -1,0 +1,39 @@
+<h2 class="section-title">
+  <i class="bi bi-table me-2"></i>Existing Credit Cards
+</h2>
+
+<div *ngIf="isLoading" class="loading">
+  Loading cards...
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-error">
+  {{ errorMessage }}
+</div>
+
+<div class="table-container" *ngIf="!isLoading && !errorMessage && safeCards.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><i class="bi bi-person me-1"></i>Name</th>
+        <th><i class="bi bi-credit-card me-1"></i>Card Number</th>
+        <th><i class="bi bi-cash me-1"></i>Balance</th>
+        <th><i class="bi bi-wallet me-1"></i>Limit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let card of safeCards">
+        <td>{{ card.cardHolderName }}</td>
+        <td class="card-number">{{ formatCardNumber(card.cardNumber) }}</td>
+        <td [ngClass]="{'negative-balance': card.balance < 0, 'positive-balance': card.balance >= 0}">
+          {{ formatCurrency(card.balance) }}
+        </td>
+        <td>{{ formatCurrency(card.cardLimit) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="!isLoading && !errorMessage && safeCards.length === 0" class="empty-state">
+  <i class="bi bi-credit-card-2-back"></i>
+  <h5>The Credit Cards list is empty</h5>
+</div>

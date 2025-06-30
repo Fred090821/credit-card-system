@@ -1,0 +1,90 @@
+.section-title {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Table styles to match the first image */
+.table-container {
+  border-radius: 0;
+  overflow: visible;
+  border: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.table {
+  width: 1000px;
+  border-collapse: collapse;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  table-layout: fixed;
+}
+
+.table thead th {
+  background-color: #c0c0c0;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #808080;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 14px;
+  height: 30px;
+  width: 250px;
+}
+
+.table tbody td {
+  padding: 6px 8px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #808080;
+  background-color: white;
+  font-size: 14px;
+  height: 30px;
+  width: 250px;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.negative-balance {
+  color: #dc3545 !important;
+  font-weight: bold;
+}
+
+.positive-balance {
+  color: #000 !important;
+  font-weight: normal;
+}
+
+.card-number {
+  font-family: Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+
+/* Responsive styles for table */
+@media (max-width: 768px) {
+  .table {
+    width: 100%;
+  }
+  
+  .table thead th,
+  .table tbody td {
+    padding: 4px 6px;
+    font-size: 12px;
+    height: 25px;
+    width: auto;
+  }
+}

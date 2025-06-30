@@ -1,0 +1,24 @@
+<div class="container main-container">
+  <!-- Header -->
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <h1 class="display-5 fw-bold text-primary mb-2">Credit Card System</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Form Section (Left Side - 1/3 width) -->
+    <div class="col-lg-4 col-md-5">
+      <div class="form-section">
+        <app-add-card (cardAdded)="onCardAdded($event)"></app-add-card>
+      </div>
+    </div>
+
+    <!-- Table Section (Right Side - 2/3 width) -->
+    <div class="col-lg-8 col-md-7">
+      <div class="table-section">
+        <app-get-all-cards [cards]="cards" [isLoading]="isLoading"></app-get-all-cards>
+      </div>
+    </div>
+  </div>
+</div>

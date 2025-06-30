@@ -1,0 +1,57 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.form-section {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.table-section {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Remove any Bootstrap-style button overrides */
+.btn-primary {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  font-weight: normal !important;
+  transition: none !important;
+}
+
+.btn-primary:hover {
+  transform: none !important;
+  background: none !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .main-container {
+    padding: 0;
+  }
+  
+  .form-section, .table-section {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
