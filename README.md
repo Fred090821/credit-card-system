@@ -2,6 +2,8 @@
 
 A modern Angular application for managing credit cards with real-time validation and a clean, responsive UI.
 
+![image](https://github.com/user-attachments/assets/f08f7f16-d211-4865-b9c1-4c413cf2005c)
+
 ## 🚀 Features
 
 - **Add Credit Cards**: Form with real-time validation including Luhn 10 algorithm
